@@ -4,6 +4,7 @@
 	"description": "This is my first description.",
 	"keywords": ["freecodecamp", "beginner", "project"],
 	"license": "MIT",
+	"version": "1.0.0",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
