@@ -52,6 +52,8 @@ app.get('/:word/echo', function(req, res) {
 
 app.get('/name', function(req, res) {
   res.json({name: req.query.first + ' ' + req.query.last})
+}).post('/name', function(req, res) {
+  res.json({name: req.body.first + ' ' + req.body.last})
 });
 
  module.exports = app;
