@@ -51,9 +51,9 @@ if (!process.env.DISABLE_XORIGIN) {
 //       .send(err.message || 'SERVER ERROR');
 //   }  
 // })
-
+absolutePath = __dirname + '/views/index.html'
 app.get("/", function(req, res) {
-  res.send('Hello Express');
+  res.sendFile(absolutePath);
 });
 
 var port = process.env.PORT || 3000;
