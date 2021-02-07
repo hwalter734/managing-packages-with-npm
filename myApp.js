@@ -1,10 +1,14 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 require('dotenv').config();
 
 function newDate() {
   return Date().toString();
 };
+
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json());
 
 app.use(function(req, res, next) {
   console.log(req.method + ' ' + req.path + ' - ' + req.ip);
